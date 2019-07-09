@@ -67,7 +67,7 @@ class SortedRotated{
     	         
     	            sorted = false;
     	            break;
-    	        }
+    	        }  
     	    }
 	    }
 
