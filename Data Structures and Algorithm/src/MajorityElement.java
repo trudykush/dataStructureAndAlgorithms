@@ -20,10 +20,6 @@ public class MajorityElement {
 	    }
 	}
 
-	/*This is a function problem.
-	You only need to complete the function given below*/
-	//User function Template for Java
-
 	class Majority
 	{
 	    /* Function to find the candidate for Majority */
