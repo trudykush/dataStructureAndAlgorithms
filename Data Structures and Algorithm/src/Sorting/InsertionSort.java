@@ -37,7 +37,7 @@ public class InsertionSort {
 		
 	}
 }
-}
+
 /*This is a function problem.You only need to complete the function given below*/
 /* The task is to complete insert() which is used 
    as shown below to implement insertionSort() */
