@@ -3,6 +3,7 @@ package String_data_Structure;
 import java.util.Scanner;
 
 public class RotatedByTwoPlaces {
+	
 	public static void main (String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int t;
@@ -12,14 +13,13 @@ public class RotatedByTwoPlaces {
 		    String s1 = sc.nextLine();
 		    String s2 = sc.nextLine();
 		    
-		    Rotation obj = new Rotation();
-		    
-		    boolean flag = obj.isRotated(s1, s2);
+		    boolean flag = Rotation.isRotated(s1, s2);
 		    
 		    if(flag == true) System.out.println("1");
 		    else System.out.println("0");
 		    
 		}
+	}
 }
 
 class Rotation{
@@ -28,7 +28,7 @@ class Rotation{
     *   s1, s2: input strings
     */
 	//amazon	azonam
-	public boolean isRotated(String s1, String s2){
+	public static boolean isRotated(String s1, String s2) {
         
 	       boolean result = false;
 	    	
@@ -65,5 +65,5 @@ class Rotation{
 	    	}
 	    	
 	    	return result;
-	    }
+	}
 }
