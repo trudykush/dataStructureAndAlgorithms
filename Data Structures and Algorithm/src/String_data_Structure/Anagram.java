@@ -44,8 +44,10 @@ public class Anagram {
 	    	  
 	    	    for (int i = 0; i < str1.length(); i++)  
 	    	    {  
-	    	        value = value ^ (int) str1.charAt(i);  
-	    	        value = value ^ (int) str2.charAt(i);  
+	    	    	int x = (int) str1.charAt(i);
+	    	    	int y = (int) str2.charAt(i);
+	    	        value = value ^ x;  
+	    	        value = value ^ y;  
 	    	    }  
 	    	  
 	    	    return value == 0;  

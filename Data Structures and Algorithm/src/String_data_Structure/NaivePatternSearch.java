@@ -32,20 +32,33 @@ class Search{
     */
     static boolean search(String txt, String pat)
     {
-        boolean value = false;
-        
-        int subLength = pat.length() - txt.length();
-        for (int i=0; i<= subLength; i++) {
-            String subString = pat.substring(i, i + txt.length());
-            
-            if (subString.equals(txt)) {
-                value = true;
-                return value;
-            } else {
-                value = false;
+		/*
+		 * boolean value = false;
+		 * 
+		 * int subLength = pat.length() - txt.length(); for (int i=0; i<= subLength;
+		 * i++) { String subString = pat.substring(i, i + txt.length());
+		 * 
+		 * if (subString.equals(txt)) { value = true; return value; } else { value =
+		 * false; } } return value;
+		 */
+    	
+    	int M = pat.length(); 
+        int N = txt.length(); 
+
+        /* A loop to slide pat[] one by one */
+        for (int i = 0; i <= N - M; i++) { 
+	                int j; 
+
+	        /* For current index i, check for pattern match */
+	        for (j = 0; j < M; j++) 
+		        if (txt.charAt(i + j) != pat.charAt(j)) 
+			        break; 
+
+	        if (j == M) // if pat[0...M-1] = txt[i, i+1, ...i+M-1] 
+		        return true; 
             }
-        }
-        return value;
+
+    return false;
     }
     
 }
