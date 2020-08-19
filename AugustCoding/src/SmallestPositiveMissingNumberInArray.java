@@ -24,7 +24,6 @@ public class SmallestPositiveMissingNumberInArray {
         }
     }
 
-    // TODO: Wrong solution below
     private static int missingNumber(int[] A, int n) {
 
         // To mark the occurrence of elements
