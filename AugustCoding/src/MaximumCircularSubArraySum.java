@@ -52,6 +52,7 @@ public class MaximumCircularSubArraySum {
             a[i] = -a[i];
         }
 
+        // Performing reverse Kandane Algorithm
         maxx_reverseKandane = maxx_reverseKandane + kandane(a,n);
 
         return Math.max(maxx_kandane, maxx_reverseKandane);
