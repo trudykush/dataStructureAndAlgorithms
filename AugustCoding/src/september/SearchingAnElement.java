@@ -1,8 +1,10 @@
+package september;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class RearrangingArrayByPosition {
+public class SearchingAnElement {
 
     public static void main(String[] args) throws IOException {
 
@@ -16,28 +18,25 @@ public class RearrangingArrayByPosition {
 
             String[] arrayElements = br.readLine().trim().split("\\s+");
 
-            for (int i = 0; i < lengthOfArray; i++) {
+            for (int i=0; i<lengthOfArray; i++) {
                 arr[i] = Integer.parseInt(arrayElements[i]);
             }
 
-            arrangeByPosition(arr, lengthOfArray);
+            int elementToSearch = Integer.parseInt(br.readLine().trim());
+
+            int result = searching(arr, lengthOfArray, elementToSearch);
+            System.out.println("The element is at position " + result);
+
         }
     }
 
-    private static void arrangeByPosition(int[] arr, int n) {
+    private static int searching(int[] arr, int n, int x) {
 
-       int i = 0;
-
-       for (i = 0; i< n; i++) {
-           arr[i] += (arr[arr[i]] % n) * n;
-       }
-
-       for (i = 0; i < n; i++) {
-           arr[i] = arr[i] / n;
-       }
-
-        for (int j: arr) {
-            System.out.print(j + " ");
+        for (int i=0; i<n; i++) {
+            if (arr[i] == x) {
+                return i;
+            }
         }
+        return -1;
     }
 }
