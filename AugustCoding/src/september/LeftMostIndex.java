@@ -42,11 +42,11 @@ public class LeftMostIndex {
                 return mid;
             }
 
-            if (arr[mid] > x) {
-                right = mid - 1;
-            } else if (arr[mid] < x) {
-                left = mid + 1;
+            if(x > arr[mid]) {
+                left = mid+1;
             }
+            else
+                right = mid-1;
 
         }
         return index;
