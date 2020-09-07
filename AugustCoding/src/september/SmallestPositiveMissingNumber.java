@@ -22,7 +22,8 @@ public class SmallestPositiveMissingNumber {
                 arr[i] = Integer.parseInt(arrayElement[i]);
             }
 
-            smallestPositive(arr, lengthOfArray);
+            int result = smallestPositive(arr, lengthOfArray);
+            System.out.println("Smallest positive number is : " + result);
         }
     }
 
