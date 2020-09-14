@@ -30,6 +30,7 @@ public class SearchingAnElement {
         }
     }
 
+    // Commenting to check Commit
     private static int searching(int[] arr, int n, int x) {
 
         for (int i=0; i<n; i++) {
