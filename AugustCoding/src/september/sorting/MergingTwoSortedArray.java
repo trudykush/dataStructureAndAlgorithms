@@ -39,7 +39,7 @@ public class MergingTwoSortedArray {
 
         int i = 0, j=0, k=0;
         int[] arrK = new int[n1+n2];
-        while (i<n1 && j <n2) {
+        while (i<n1 && j<n2) {
 
             if (arr1[i] <= arr2[j]) {
                 arrK[k] = arr1[i];
