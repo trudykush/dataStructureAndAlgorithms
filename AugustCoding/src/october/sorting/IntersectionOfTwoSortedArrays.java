@@ -1,4 +1,4 @@
-package september.sorting;
+package october.sorting;
 
 import java.util.ArrayList;
 import java.util.Scanner;
