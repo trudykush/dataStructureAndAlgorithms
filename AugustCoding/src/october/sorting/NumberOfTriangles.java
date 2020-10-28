@@ -21,6 +21,11 @@ public class NumberOfTriangles {
         }
     }
 
+    /*
+    *  For a triangle to be possible from 3 values,
+    *  the sum of any of the two values (or sides) must be greater than the third value (or third side).
+    * */
+
     private static void countingNumberOfPossibleTriangles(int[] arr, int n) {
 
         Arrays.sort(arr);
