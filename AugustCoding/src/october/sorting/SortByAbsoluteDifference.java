@@ -29,7 +29,7 @@ public class SortByAbsoluteDifference {
 
         TreeMap<Integer, ArrayList<Integer>> treeMap = new TreeMap<>();
 
-        // Store value in a map with the difference with X as Key
+        // Store the values in a map with the difference with X as key
         for (int i = 0; i < n; i++) {
             int diff = Math.abs(k - arr[i]);
             if (treeMap.containsKey(diff)) {
@@ -43,14 +43,14 @@ public class SortByAbsoluteDifference {
             }
         }
 
-        // Update the values of array
+        // Update the values o array#
         int index = 0;
-        for (Map.Entry entry : treeMap.entrySet()) {
+        for (Map.Entry entry :
+                treeMap.entrySet()) {
             ArrayList<Integer> al = treeMap.get(entry.getKey());
             for (int i = 0; i < al.size(); i++) {
                 arr[index++] = al.get(i);
             }
         }
-
     }
 }
