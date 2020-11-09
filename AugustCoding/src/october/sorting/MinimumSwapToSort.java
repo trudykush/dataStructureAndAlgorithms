@@ -30,21 +30,30 @@ public class MinimumSwapToSort {
         int ans = 0;
         int[] temp = Arrays.copyOfRange(arr, 0, n);
 
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
-
+       // Hashmap which stores the indexes of input array
+        HashMap<Integer, Integer> hashMap =
+                new HashMap<>();
         Arrays.sort(temp);
-
         for (int i = 0; i < n; i++) {
             hashMap.put(arr[i], i);
         }
 
-        for (int i = 0; i < n; i++) {
-            if (arr[i] != temp[i]) {
+        for (int i = 0; i < hashMap.size(); i++) {
+            System.out.println(hashMap.get(arr[i]));
+        }
 
+        for (int i = 0; i < n; i++) {
+            //Now Checking that current element is in right place or now
+            if (arr[i] != temp[i]) {
                 ans++;
                 int init = arr[i];
+
+                // If not, swap this element with the index of the element
+                // which should come here
                 swap(arr, i, hashMap.get(temp[i]));
 
+                // Update the indexes in
+                // the hashmap accordingly
                 hashMap.put(init, hashMap.get(temp[i]));
                 hashMap.put(temp[i], i);
             }
