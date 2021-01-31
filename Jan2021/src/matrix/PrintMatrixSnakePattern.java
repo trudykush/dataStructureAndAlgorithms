@@ -23,4 +23,21 @@ public class PrintMatrixSnakePattern {
         }
     }
 
+    private static void snakePattern(int[][] matrix, int m1, int n1) {
+
+        for (int i = 0; i < matrix.length; i++) {
+
+            // if the row is even -> print left to right
+            if (i % 2 == 0) {
+                for (int j = 0; j < m1; j++) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+            else { // else print from right to left
+                for (int j = m1 -1; j >= 0; j--) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+    }
 }
