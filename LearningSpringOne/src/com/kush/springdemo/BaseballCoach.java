@@ -2,9 +2,8 @@ package com.kush.springdemo;
 
 public class BaseballCoach {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public String getDailyWorkout() {
+		return "Spend 30 mins in batting practice";
 	}
 
 }
