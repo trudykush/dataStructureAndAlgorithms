@@ -2,23 +2,27 @@ package com.kush.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringHelloApp {
+public class SetterDemoApp {
+
 	public static void main(String[] args) {
-		
-		// load the spring config file
+		// load spring config file
 		ClassPathXmlApplicationContext context = 
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		// Retrieve bean from spring container
-		Coach theCoach = context.getBean("myCoach", Coach.class);		
+		// retrieve bean from spring-container
+		CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		
-		// call methods on the bean
+		// call method on the bean
 		System.out.println(theCoach.getDailyWorkout());
 		
-		// let's call our new method for fortunes
 		System.out.println(theCoach.getDailyFortune());
 		
-		// close the context
+		System.out.println(theCoach.getEmailAddress());
+		
+		System.out.println(theCoach.getTeam());
+	
+		// close the bean
 		context.close();
 	}
+
 }
