@@ -25,7 +25,5 @@ public class AnnotationBeanScopDemoApp {
 		
 		// close the context
 		context.close();
-
 	}
-
 }
