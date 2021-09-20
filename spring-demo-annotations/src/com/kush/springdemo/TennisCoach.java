@@ -1,5 +1,8 @@
 package com.kush.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -21,6 +24,18 @@ public class TennisCoach implements Coach {
 	
 	public TennisCoach() {
 		System.out.println("DEfault constructor");
+	}
+	
+	// define init
+	@PostConstruct
+	public void doMyStartStuff() {
+		System.out.println("Post Construct");
+	}
+	
+	// define destroy
+	@PreDestroy
+	public void preDestory() {
+		System.out.println("Pre Destroy");
 	}
 	
 //	@Autowired
