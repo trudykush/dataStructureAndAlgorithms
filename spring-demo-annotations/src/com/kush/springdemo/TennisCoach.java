@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("thatSillyCoach")
-@Scope("prototype")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 	
 	// this is called Field Injection
