@@ -35,7 +35,7 @@ public class TennisCoach implements Coach {
 	// define destroy
 	@PreDestroy
 	public void preDestory() {
-		System.out.println("Pre Destroy");
+		System.out.println("Pre Destroy	");
 	}
 	
 //	@Autowired
